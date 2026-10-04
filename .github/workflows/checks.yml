@@ -1,0 +1,41 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Leak check
+        # Private names must not reach this public repo. The patterns are the
+        # org secret LEAK_PATTERNS, which fork PRs do not get: they pass with a
+        # notice, and the push to main after merge runs the full check.
+        env:
+          LEAK_PATTERNS: ${{ secrets.LEAK_PATTERNS }}
+          ENFORCE: ${{ github.repository_owner == 'rackmarten' && !(github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork) }}
+        run: |
+          if [ -z "$LEAK_PATTERNS" ]; then
+            if [ "$ENFORCE" = true ]; then
+              echo "::error::LEAK_PATTERNS secret is not available"
+              exit 1
+            fi
+            echo "::notice::LEAK_PATTERNS not available, leak check skipped"
+            exit 0
+          fi
+          .github/scripts/leak-check.sh --tree --log
+
+      - name: yamllint
+        run: |
+          pipx install yamllint
+          git ls-files -z '*.yml' '*.yaml' | xargs -0 yamllint -d relaxed
