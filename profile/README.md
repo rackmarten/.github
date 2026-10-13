@@ -13,6 +13,7 @@ and is kept simple enough to read in an afternoon.
 | [ui-kit](https://github.com/rackmarten/ui-kit) | Vue 3 + Vuetify 3 building blocks for the frontend of a small self-hosted web app |
 | [eslint-config](https://github.com/rackmarten/eslint-config) | Opinionated ESLint 9 flat config + Prettier config for TypeScript and Vue 3 |
 | [pinboard](https://github.com/rackmarten/pinboard) | Task board and budget tracker for autonomous Claude Code agents, with a mobile-friendly PWA |
+| [foreman](https://github.com/rackmarten/foreman) | Runs queued pinboard tasks as Claude Code sessions: one clone per task, a pull request, CI, a report back |
 
 More are on the way as they get cleaned up for public use.
 
