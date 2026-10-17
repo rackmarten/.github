@@ -1,3 +1,4 @@
 # Org-wide default: every public rackmarten repo without its own FUNDING.yml
-# shows this as its "Sponsor" button.
+# shows these on its "Sponsor" button.
+github: [uncikmarek]
 ko_fi: rackmarten
