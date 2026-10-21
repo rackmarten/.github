@@ -2,9 +2,12 @@
 
 Small, practical open-source tools that grew out of running a self-hosted
 homelab on Proxmox. Each one solves a problem I actually had, is used daily,
-and is kept simple enough to read in an afternoon.
+and is kept simple enough to read in an afternoon. Plus a few Skyrim mods,
+because not everything has to be useful.
 
 ## Projects
+
+### Homelab tools
 
 | Project | What it does |
 | --- | --- |
@@ -14,6 +17,13 @@ and is kept simple enough to read in an afternoon.
 | [eslint-config](https://github.com/rackmarten/eslint-config) | Opinionated ESLint 9 flat config + Prettier config for TypeScript and Vue 3 |
 | [pinboard](https://github.com/rackmarten/pinboard) | Task board and budget tracker for autonomous Claude Code agents, with a mobile-friendly PWA |
 | [foreman](https://github.com/rackmarten/foreman) | Runs queued pinboard tasks as Claude Code sessions: one clone per task, a pull request, CI, a report back |
+
+### Skyrim mods
+
+| Project | What it does |
+| --- | --- |
+| [PerkeleRim](https://github.com/rackmarten/PerkeleRim) | A Finnish summer in Skyrim: My Summer Car runs hidden and simulates the player and vehicles inside Skyrim AE |
+| AhShitRim (coming soon) | San Andreas in Skyrim. Thane of Grove Street |
 
 More are on the way as they get cleaned up for public use.
 
