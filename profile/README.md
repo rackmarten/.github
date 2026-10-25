@@ -23,7 +23,7 @@ because not everything has to be useful.
 | Project | What it does |
 | --- | --- |
 | [PerkeleRim](https://github.com/rackmarten/PerkeleRim) | A Finnish summer in Skyrim: My Summer Car runs hidden and simulates the player and vehicles inside Skyrim AE |
-| AhShitRim (coming soon) | San Andreas in Skyrim. Thane of Grove Street |
+| [AhShitRim](https://github.com/rackmarten/AhShitRim) | Thane of Grove Street: San Andreas runs hidden and simulates CJ, his cars and his guns inside Skyrim SE and AE |
 
 More are on the way as they get cleaned up for public use.
 
